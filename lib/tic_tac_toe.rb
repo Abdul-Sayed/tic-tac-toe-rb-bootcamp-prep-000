@@ -55,7 +55,6 @@ end
 
 def turn(board)
   puts "Welcome to Tic Tac Toe!"
-  display_board(board)
   
   puts "Which position would you like to go?"
   puts "Please enter 1-9:"
@@ -75,11 +74,6 @@ end
 
 
 def turn_count(board)
-  if (board.count("O") + board.count("X")).even?
-    puts "X turn"
-  elsif (board.count("O") + board.count("X")).odd?
-    puts "O turn"
-  end
   counter = 0
   board.each { |position|
     if (position == "X" || position == "O")

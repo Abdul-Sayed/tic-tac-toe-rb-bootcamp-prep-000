@@ -134,13 +134,20 @@ def winner(board)
 end 
 
 
-# def play(board)
-#   moveCounter = 1
-#   for turn in (0..8)
-#     turn(board, moveCounter)
-#     moveCounter += 1
-#   end
-# end
+def play(board)
+# A tic tac toe game must allow players to take turns, 
+# checking if the game is over after every turn, 
+# and at the conclusion of the game, whether because it was won or because it was a draw, reporting to the user the outcome of the game. 
+
+  until over?(board)
+    turn(board)
+  end
+  if won?(board)
+    puts "Congratulations!"
+  elsif draw?(board)
+    puts "It has been a draw!"
+  end
+end
 
 
 

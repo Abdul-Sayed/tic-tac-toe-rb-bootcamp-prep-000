@@ -135,17 +135,13 @@ end
 
 
 def play(board)
-# A tic tac toe game must allow players to take turns, 
-# checking if the game is over after every turn, 
-# and at the conclusion of the game, whether because it was won or because it was a draw, reporting to the user the outcome of the game. 
-
   until over?(board)
     turn(board)
   end
   if won?(board)
-    puts "Congratulations!"
+    puts "Congratulations #{winner(board)}!"
   elsif draw?(board)
-    puts "It has been a draw!"
+    puts "Cat's Game!"
   end
 end
 
